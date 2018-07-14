@@ -8,3 +8,11 @@ Required fonts:
 Required Themes:
 
 	-Powerlevel9k (oh-my-zsh)
+
+Required VIM Plugins:
+
+        -Vimtex
+        -ale
+        -Airline
+        -Airline Themes
+        -texlog.vim
