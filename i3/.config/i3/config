@@ -5,6 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+exec_always wal -g -i /home/lars/Pictures/alena-aenami-lights1k1.jpg
 exec_always --no-startup-id nitrogen --restore
 exec_always ~/.screens/screens.sh
 exec --no-startup-id ./dotfiles/launch.sh
@@ -24,6 +25,8 @@ set $TERMINAL termite
 font pango:monospace 8
 font pango:noto 8
 
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -210,10 +213,17 @@ bindsym $mod+r mode "resize"
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:System San Francisco Display 10
 
-client.focused          #002b36 #586e75 #fdf6e3 #268bd2
-client.focused_inactive #002b36 #073642 #839496 #073642
-client.unfocused        #002b36 #073642 #839496 #073642
-client.urgent #002b36 #dc322f #fdf6e3 #002b36
+#client.focused          #002b36 #586e75 #fdf6e3 #268bd2
+#client.focused_inactive #002b36 #073642 #839496 #073642
+#client.unfocused        #002b36 #073642 #839496 #073642
+#client.urgent #002b36 #dc322f #fdf6e3 #002b36
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 new_window normal
 hide_edge_borders vertical

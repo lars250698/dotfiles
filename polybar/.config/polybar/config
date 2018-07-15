@@ -18,11 +18,15 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0015374F
-background-alt = #0F0F0F
+;background = #0015374F
+background = ${xrdb:color0}
+;background-alt = #0F0F0F
+background-alt = ${xrdb:color1}
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
+;foreground = #dfdfdf
+foreground = ${xrdb:color7}
+;foreground-alt = #555
+foreground-alt = ${xrdb:color3}
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -158,7 +162,7 @@ label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-foreground = #50d3d3d3
+label-unfocused-foreground = ${colors.foreground-alt}
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
