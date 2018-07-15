@@ -16,3 +16,7 @@ Required VIM Plugins:
         -Airline
         -Airline Themes
         -texlog.vim
+
+Other dependencies:
+
+        -python-pywal
