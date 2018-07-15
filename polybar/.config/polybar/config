@@ -17,12 +17,10 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
 ;background = #0015374F
 background = ${xrdb:color0}
 ;background-alt = #0F0F0F
 background-alt = ${xrdb:color1}
-;foreground = ${xrdb:color7:#222}
 ;foreground = #dfdfdf
 foreground = ${xrdb:color7}
 ;foreground-alt = #555

@@ -5,13 +5,14 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec_always wal -g -i /home/lars/Pictures/alena-aenami-lights1k1.jpg
-exec_always --no-startup-id nitrogen --restore
-exec_always ~/.screens/screens.sh
 exec --no-startup-id ./dotfiles/launch.sh
+exec_always --no-startup-id wal -i ~/Pictures/alena-aenami-lights1k1.jpg
 exec --not-startup-id start-pulseaudio-x11
 exec --no-startup-id compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always ~/.screens/screens.sh
+
+
 
 # i3 config file (v4)
 #
