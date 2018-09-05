@@ -17,13 +17,9 @@
 ;==========================================================
 
 [colors]
-;background = #0015374F
 background = ${xrdb:color0}
-;background-alt = #0F0F0F
 background-alt = ${xrdb:color1}
-;foreground = #dfdfdf
 foreground = ${xrdb:color7}
-;foreground-alt = #555
 foreground-alt = ${xrdb:color3}
 primary = #ffb52a
 secondary = #e60053
@@ -63,7 +59,8 @@ font-5 = Font Awesome 5 Brands:pixelsize=10;2
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = xbacklight alsa xkeyboard memory cpu wlan eth battery date powermenu
+modules-right = xbacklight alsa xkeyboard memory cpu wlan eth battery date 
+;powermenu
 
 tray-position = right
 tray-padding = 2
@@ -238,7 +235,7 @@ interval = 3.0
 
 format-connected-prefix = " "
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
+label-connected = %{A1:connman-gtk:}%essid%%{A}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -259,7 +256,7 @@ interface = enp0s25
 interval = 3.0
 
 format-connected-prefix = " "
-label-connected = %local_ip%
+label-connected = %{A1:connman-gtk:}%local_ip%%{A}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
