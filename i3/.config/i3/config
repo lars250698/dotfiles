@@ -1,9 +1,10 @@
 exec --no-startup-id ./dotfiles/launch.sh
-exec_always --no-startup-id wal -g -i ~/Pictures/alena-aenami-004-1k1.jpg
+exec_always --no-startup-id wal -R
 exec --not-startup-id start-pulseaudio-x11
 exec --no-startup-id compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always ~/.screens/screens.sh
+exec --no-startup-id i3-msg 'workspace 2:web; exec /usr/bin/firefox'
 
 set $mod Mod4
 set $TERMINAL termite
@@ -13,7 +14,7 @@ font pango:noto 8
 
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
-set_from_resource $bgalt i3wm.color3 #f0f0f0
+set_from_resource $bgalt i3wm.color7 #f0f0f0
 #font pango:DejaVu Sans Mono 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -173,7 +174,7 @@ client.background       $bg
 new_window normal
 hide_edge_borders vertical
 bindsym Control+Shift+x [class="^.*"] border toggle
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 0
 
 gaps inner 8
 gaps outer 0

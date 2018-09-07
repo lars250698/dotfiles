@@ -4,6 +4,7 @@ export LANG="en_US.UTF-8"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+  source ~/.profile
   export ZSH="/home/lars/.oh-my-zsh"
   export VISUAL=vim
   export EDITOR="$VISUAL"

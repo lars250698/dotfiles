@@ -22,3 +22,4 @@ Other dependencies:
     
     -python-pywal
     -oomox
+    -i3lock-color

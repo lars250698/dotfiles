@@ -31,7 +31,5 @@ then
         echo "done"
     done
 fi
-# dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop
-# i3lock  -I 10 -d -e -u -n -i /tmp/screen.png
 i3lock -e -n -i /tmp/screen.png --insidevercolor=00000000 --insidewrongcolor=00000000 --insidecolor=00000000 --ringvercolor=ffffffc0 --ringwrongcolor=ff0000ff --ringcolor=00000000 --linecolor=00000000 --keyhlcolor=fffffff0 --bshlcolor=ff2400f0 --separatorcolor=00000000 --wrongcolor=ff2400ff --verifcolor=50c878ff --timecolor=ffffffff --timepos="100:40" -k --datecolor=00000000 --veriftext="" --wrongtext="" --noinputtext="" --radius=$(($RX/2)) --ring-width=4 &
 exit
