@@ -6,6 +6,8 @@ export LANG="en_US.UTF-8"
 # Path to your oh-my-zsh installation.
   source ~/.profile
   export ZSH="/home/lars/.oh-my-zsh"
+  export ANDROID_HOME="/home/lars/.android-sdk"
+  export PATH=/home/lars/.flutter-sdk/bin:$PATH
   export VISUAL=vim
   export EDITOR="$VISUAL"
   #ZSH_THEME="gallois"

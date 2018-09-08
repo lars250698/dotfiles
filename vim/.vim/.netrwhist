@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_cnt =2
 let g:netrw_dirhist_1='/home/lars/dotfiles/i3/.config'
-let g:netrw_dirhist_2='/home/lars/dotfiles/polybar/.config'
-let g:netrw_dirhist_3='/home/lars/dotfiles/i3/.config'
-let g:netrw_dirhist_4='/home/lars/dotfiles/i3'
-let g:netrw_dirhist_5='/home/lars/dotfiles/screens'
-let g:netrw_dirhist_6='/home/lars/dotfiles/xlock/.xlock'
-let g:netrw_dirhist_7='/home/lars/dotfiles/polybar'
-let g:netrw_dirhist_8='/home/lars/dotfiles/xlock/.xlock'
-let g:netrw_dirhist_9='/home/lars/dotfiles/i3'
+let g:netrw_dirhist_2='/home/lars/dotfiles/i3'
