@@ -4,14 +4,14 @@ exec --not-startup-id start-pulseaudio-x11
 exec --no-startup-id compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always ~/.screens/screens.sh
-exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/lars/.i3/workspace-2.json'"
-exec --no-startup-id "termite --name top"
-exec --no-startup-id "termite --name ranger"
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/lars/.config/i3/workspace/workspace.json'"
+exec --no-startup-id "termite --name top -e ~/.vtop"
+exec --no-startup-id "termite --name ranger -e ~/.ranger"
 exec --no-startup-id "termite --name upr -e ~/.clock"
 exec --no-startup-id "termite --name botr"
-exec --no-startup-id "termite --name yay"
+exec --no-startup-id "termite --name cava -e ~/.cava"
 exec --no-startup-id "i3-msg 'workspace 2; exec firefox'"
-exec --no-startup-id "xautolock -time 10 -locker ~/.xlock/lock.sh"
+exec --no-startup-id "xautolock -time 5 -locker ~/.xlock/lock.sh"
 
 set $mod Mod4
 set $TERMINAL termite
