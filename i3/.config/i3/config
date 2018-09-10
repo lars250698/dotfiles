@@ -1,17 +1,19 @@
-exec --no-startup-id ./dotfiles/launch.sh
+exec  ./dotfiles/launch.sh
 exec_always --no-startup-id wal -R
 exec --not-startup-id start-pulseaudio-x11
 exec --no-startup-id compton
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always ~/.screens/screens.sh
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/lars/.config/i3/workspace/workspace.json'"
-exec --no-startup-id "termite --name top -e ~/.vtop"
-exec --no-startup-id "termite --name ranger -e ~/.ranger"
-exec --no-startup-id "termite --name upr -e ~/.clock"
-exec --no-startup-id "termite --name botr"
-exec --no-startup-id "termite --name cava -e ~/.cava"
-exec --no-startup-id "i3-msg 'workspace 2; exec firefox'"
-exec --no-startup-id "xautolock -time 5 -locker ~/.xlock/lock.sh"
+exec "termite --name scr"
+exec "termite --name cava -e ~/.cava"
+exec "termite --name top -e ~/.vtop"
+exec "termite --name ranger -e ~/.ranger"
+exec "termite --name upr -e ~/.clock"
+exec "termite --name botr"
+exec "i3-msg 'workspace 2; exec firefox'"
+exec --no-startup-id "xautolock -time 10 -locker ~/.xlock/lock.sh"
+for_window [instance="^scr$"] move scratchpad
 
 set $mod Mod4
 set $TERMINAL termite
@@ -26,6 +28,10 @@ set_from_resource $bgalt i3wm.color7 #f0f0f0
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# Scratchpad
+bindsym $mod+t scratchpad show
+bindsym $mod+Shift+t move scratchpad
 
 # lock screen
 bindsym Control+$mod+l exec ~/.xlock/lock.sh

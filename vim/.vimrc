@@ -7,6 +7,7 @@ Plug 'w0rp/ale'
 Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 "vim-airline"
@@ -21,3 +22,5 @@ let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
 let g:airline_symbols.space = "\ua0"
 let g:airline_theme='powerlineish'
+
+colorscheme wal
