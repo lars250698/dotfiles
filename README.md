@@ -1,3 +1,5 @@
+Repo moved to https://bitbucket.org/lars250698/dotfiles/src/master/
+
 Make sure to add an icon named 'icon.png' into the .xlock folder!
 
 Required fonts:
