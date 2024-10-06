@@ -44,12 +44,4 @@ return {
       })
     end,
   },
-  {
-    "LukasPietzschmann/boo.nvim",
-    keys = {
-      vim.keymap.set("n", "<leader>cb", function()
-        require("boo").boo()
-      end, { desc = "Boo Preview" }),
-    },
-  },
 }
