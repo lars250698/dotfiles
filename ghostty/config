@@ -1,0 +1,31 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+theme = catppuccin-macchiato
+macos-titlebar-style = "hidden"
+
+font-family = "JetBrains mono"
+font-size = 14.0
+font-thicken-strength = 70
+font-thicken = true
+
+macos-option-as-alt = "left"
+
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+macos-icon = "blueprint"
+
+clipboard-read = "allow"
+clipboard-write = "allow"
+
+window-padding-color = extend
+window-step-resize = true
+
+keybind = clear
+keybind = super+shift+,=reload_config
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
+keybind = ctrl+plus=increase_font_size:1
+
+mouse-hide-while-typing = true

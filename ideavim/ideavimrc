@@ -1,0 +1,69 @@
+set timeoutlen=5000
+let mapleader = " "
+set scrolloff=10
+set linenumber
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamed
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set surround
+set highlightedyank
+
+set nerdtree
+
+set easymotion
+set notimeout
+
+set which-key
+
+" Tab navigation
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-p> :tabprev<CR>\
+
+" Jump between methods
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+
+" Easy visual indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" Open NERDTree (use q to exit)
+map <leader>x :NERDTreeToggle<CR>
+
+" Window splits
+map <leader><Bar> <Action>(SplitVertically)
+map <leader>- <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Code actions "
+map <Leader>cf <Action>(ReformatCode)
+map <Leader>cr <Action>(RenameElement)
+
+" Move selected lines down
+vnoremap J :m '>+1<CR>gv=gv
+
+" Move selected lines up
+vnoremap K :m '<-2<CR>gv=gv
+
+map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader><space> <action>(SearchEverywhere)
+
+map <Leader>| <action>(SplitVertically)
+map <Leader>bd <action>(Terminal.CloseTab)
+
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k

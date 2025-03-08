@@ -1,0 +1,25 @@
+yabai -m config debug_output on
+
+yabai -m config layout bsp
+yabai -m config auto_balance off
+
+yabai -m config mouse_follows_focus off
+yabai -m config focus_follows_mouse off
+
+yabai -m config top_padding    10
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     15
+
+yabai -m config mouse_modifier ctrl
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+
+borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
+
+yabai -m rule --add app="System Settings" manage=off
+
+# Arc
+yabai -m rule --add app="^Arc$" manage=off
+yabai -m signal --add event=window_created app="^Arc$" action="~/.config/yabai/yabai_apply_arc_rules.sh"
