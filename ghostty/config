@@ -1,13 +1,15 @@
 # vim:fileencoding=utf-8:foldmethod=marker
-theme = catppuccin-macchiato
+theme = catppuccin-macchiato.conf
 macos-titlebar-style = "hidden"
 
+custom-shader = shaders/cursor_warp.glsl
+
 font-family = "JetBrains mono"
-font-size = 14.0
+font-size = 16.0
 font-thicken-strength = 70
 font-thicken = true
 
-macos-option-as-alt = "left"
+macos-option-as-alt = left
 
 macos-auto-secure-input = true
 macos-secure-input-indication = true

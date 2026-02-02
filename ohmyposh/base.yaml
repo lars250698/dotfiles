@@ -1,0 +1,72 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+palette:
+    blue: '#8AADF4'
+    closer: p:os
+    lavender: '#B7BDF8'
+    os: '#ACB0BE'
+    pink: '#F5BDE6'
+    red: '#d20f39'
+    subtext0: '#6c6f85'
+    yellow: '#df8e1d'
+upgrade:
+    source: cdn
+    interval: 168h
+    auto: false
+    notice: false
+blocks:
+    - type: prompt
+      alignment: left
+      newline: true
+      segments:
+        - template: '{{ .Path }} '
+          foreground: p:blue
+          type: path
+          style: plain
+          properties:
+            home_icon: "~"
+            style: full
+        - template: '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+          foreground: p:subtext0
+          type: git
+          style: plain
+          properties:
+            branch_icon: ''
+            commit_icon: '@'
+            fetch_status: true
+    - type: prompt
+      alignment: left
+      newline: true
+      segments:
+        - template: ❯
+          foreground_templates:
+            - '{{ if gt .Code 0 }}p:red{{ end }}'
+            - '{{ if eq .Code 0 }}p:pink{{ end }}'
+          type: text
+          style: plain
+    - type: rprompt
+      overflow: hidden
+      segments:
+        - type: executiontime
+          style: plain
+          foreground: p:yellow
+          template: '{{ .FormattedMs }}'
+          properties:
+            threshold: 5000
+            style: austin
+
+transient_prompt:
+  background: transparent
+  foreground_templates:
+    - '{{ if gt .Code 0 }}p:red{{ end }}'
+    - '{{ if eq .Code 0 }}p:pink{{ end }}'
+  template: "❯ "
+secondary_prompt:
+  background: transparent
+  foreground_templates:
+    - '{{ if gt .Code 0 }}p:red{{ end }}'
+    - '{{ if eq .Code 0 }}p:pink{{ end }}'
+  template: "❯❯ "
+version: 3
+final_space: true
+cursor: "\e[6 q"
